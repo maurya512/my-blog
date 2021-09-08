@@ -1,10 +1,11 @@
+// * import dependencies
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <div className="App">
-      <h1>
-        Welcome to my blog
-      </h1>
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 }
 

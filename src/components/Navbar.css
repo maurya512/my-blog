@@ -1,0 +1,67 @@
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  /* enables the navbar to stay on top of the screen at all times */
+  position: sticky;
+  top: 0;
+  display: flex;
+  /* centers all the items to center */
+  align-items: center;
+  /* custom font family from google fonts */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+
+/* separate left and right contents of the navbar */
+.navLeft,
+.navRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* social media icons */
+.navIcon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+/* nav image */
+.navImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* search icon */
+.navSearchIcon {
+    color: #444;
+    cursor: pointer;
+}
+
+/* separate  center contents of the navbar */
+.navCenter {
+  flex: 6;
+}
+
+/* arrange the nav list */
+.navList {
+    display: flex;
+    list-style-type: none;
+    cursor: pointer;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* arrange the nav items */
+.navListItems {
+    margin-right: 20px;
+    color: #444;
+    font-size: 18px;
+}
