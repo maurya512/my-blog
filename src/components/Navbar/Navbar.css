@@ -11,6 +11,8 @@
   /* custom font family from google fonts */
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
+  /* prevents the overflow of title */
+  z-index: 999;
 }
 
 /* separate left and right contents of the navbar */

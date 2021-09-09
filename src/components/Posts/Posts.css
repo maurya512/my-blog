@@ -1,4 +1,7 @@
 /* posts being 9 / 12 */
 .posts {
-    flex: 9;
+  flex: 9;
+  display: flex;
+  /* children use the entire length of the flex box and if content goes beyond children they are pushed downwards */
+  flex-wrap: wrap;
 }

@@ -1,12 +1,19 @@
 // * import style files for posts
-import './Posts.css';
+import Post from "../../Post/Post";
+import "./Posts.css";
 
 const Posts = () => {
-    return (
-        <div className="posts">
-            P O S T S
-        </div>
-    )
-}
+  return (
+    <div className="posts">
+      {/* post component being rendered a couple of times */}
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+    </div>
+  );
+};
 
-export default Posts
+export default Posts;
