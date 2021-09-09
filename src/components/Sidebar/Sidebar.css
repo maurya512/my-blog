@@ -1,0 +1,4 @@
+/* sidebar being 3 / 12 */
+.sidebar {
+    flex: 3;
+}
