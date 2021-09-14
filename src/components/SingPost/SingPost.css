@@ -39,7 +39,7 @@
 
 /* accesses the first child of the class instead of giving another class name */
 .singPostIcon:first-child {
-  color: blue;
+  color: cornflowerblue;
 }
 
 /* accesses the second child of the class instead of giving another class name */
