@@ -1,5 +1,6 @@
 // * import dependencies
 import Navbar from "./components/Navbar/Navbar";
+import Login from "./pages/Login/Login";
 import Settings from "./pages/Settings/Settings";
 // import Home from "./pages/Home/Home";
 // import SinglePost from "./pages/SinglePost/SinglePost";
@@ -10,7 +11,8 @@ function App() {
     <>
       <Navbar />
       {/* <Write /> */}
-      <Settings />
+      {/* <Settings /> */}
+      <Login />
     </>
   );
 }
