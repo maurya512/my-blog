@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // * import style files for login page
 import "./Login.css";
 
@@ -18,7 +19,11 @@ const Login = () => {
         />
         {/* login button prompt */}
         <button className="loginBtn">Login</button>
-        <button className="userRegBtn">Register</button>
+        <button className="userRegBtn">
+          <Link to="/register" className="link">
+            REGISTER
+          </Link>
+        </button>
       </div>
     </div>
   );

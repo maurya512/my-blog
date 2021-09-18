@@ -65,8 +65,10 @@
 /* arrange the nav items */
 .navListItems {
     margin-right: 20px;
-    color: #444;
+    color: inherit;
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
+    text-decoration: none;
+    list-style: none;
 }

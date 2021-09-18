@@ -11,6 +11,8 @@ import SinglePost from "./pages/SinglePost/SinglePost";
 import Write from "./pages/Write/Write";
 
 function App() {
+  // define a pseudo user
+  const user = true;
   return (
     // ! Wrap the entire container under Router to enable routing to each and every component
     <Router>
@@ -23,24 +25,28 @@ function App() {
           <Home />
         </Route>
         {/* path defined to write component */}
+        {/* if user detected render the home page else redirect them to register screen */}
         <Route path="/write">
-          <Write />
+          {user ? <Write /> : <Register />}
         </Route>
         {/* path to a single post id */}
         <Route path="/post/:postId">
           <SinglePost />
         </Route>
         {/* path defined for settings comp */}
+        {/* if user detected render the settings page else redirect them to the register screen */}
         <Route path="/settings">
-          <Settings />
+          {user ? <Settings /> : <Register />}
         </Route>
         {/* path defined for login comp */}
+        {/* if user is detected render the home page else redirect them to the login screen/*/}
         <Route path="/login">
-          <Login />
+          {user ? <Home /> : <Login />}
         </Route>
         {/* path defined for register comp */}
+        {/* if user is detecte render the home page else redirect them to the register screen */}
         <Route path="/register">
-          <Register />
+          {user ? <Home /> : <Register />}
         </Route>
       </Switch>
     </Router>

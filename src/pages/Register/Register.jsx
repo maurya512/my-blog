@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // * import styling for the register page
 import "./Register.css";
 
@@ -30,7 +31,11 @@ const Register = () => {
         <button className="registerBtn">Register</button>
       </form>
       {/* login redirect button */}
-      <button className="registerLoginButton">Login</button>
+      <button className="registerLoginButton">
+        <Link className="link" to="/login">
+          LOGIN
+        </Link>
+      </button>
     </div>
   );
 };
