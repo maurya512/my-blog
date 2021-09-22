@@ -12,16 +12,22 @@ const mongoose = require("mongoose");
 
 dotenv.config();
 
+// ! to enable the app to send data in json 
+app.use(express.json());
+// ! backend routes config
+const authRoute = require("../api/routes/auth")
+
+
 // ! establish a connection to mongoose
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify: true
 }).then(console.log("mongoose connection established")).catch((err) => console.log(err))
 
 // * define routes 
-app.use("/", (req, res) => {
-    console.log("this is backend url")
-})
+app.use("/api/auth", authRoute);
 
 // ! define port
 const PORT = 5000;
