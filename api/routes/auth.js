@@ -36,8 +36,33 @@ router.post("/register", async (req, res) => {
     }
 })
 
+// ! login routes 
+router.post("/login", async (req, res) => {
+    try {
+        // ! find the username with their id 
+        const user = await User.findOne({ username: req.body.username })
+        // ! if no user found send an error message
+        if(!user) {
+            return res.status(400).json("Wrong Credentials")
+        }
+
+        // ! compares the password entered by the user and the password stored in the database
+        const validate = await bcrypt.compare(req.body.password, user.password)
+        // ! if user not validated send an error message
+        // !validate && res.status(400).json("Please Enter Correct Password");
+        if(!validate) {
+            return res.status(400).json("Please Enter The Correct Password")
+        }
+
+        // ! doesn't send the hashed password to the back end using the ._doc extension
+        const { password, ...others} = user._doc;
+
+        // ! if everything is as required send all the data except the user's password
+        res.status(200).json(others);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+})
+
 // ! exporting module
 module.exports = router;
-
-// ! login routes 
-// module.exports = router

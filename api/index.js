@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGO_URL, {
 app.use("/api/auth", authRoute);
 
 // ! define port
-const PORT = 5000;
+// const PORT = 5000;
 
 // ! listen for the app
 app.listen("5000", () => {
