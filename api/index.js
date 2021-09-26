@@ -17,6 +17,8 @@ app.use(express.json());
 // ! backend routes config
 const authRoute = require("../api/routes/auth")
 const userRoute = require("../api/routes/user")
+const postRoute = require("../api/routes/post")
+const catRoute = require("../api/routes/categories")
 
 
 // ! establish a connection to mongoose
@@ -30,6 +32,9 @@ mongoose.connect(process.env.MONGO_URL, {
 // * define routes 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
+app.use("/api/categories", catRoute);
+
 
 // ! define port
 // const PORT = 5000;
