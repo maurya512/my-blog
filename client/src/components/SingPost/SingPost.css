@@ -1,0 +1,74 @@
+.singPost {
+    flex: 9;
+  }
+  
+  /* styling for single post wrapper */
+  .singPostWrapper {
+    padding: 20px;
+    /* removes padding from the right side of the page */
+    padding-right: 0;
+  }
+  
+  /* styling for the image */
+  .singPostImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  /* styling for the title */
+  .singPostTitle {
+    text-align: center;
+    margin: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+  }
+  
+  /* styling for single post icon */
+  .singPostEdit {
+    float: right;
+    font-size: 16px;
+  }
+  
+  /* sing icon */
+  .singPostIcon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* accesses the first child of the class instead of giving another class name */
+  .singPostIcon:first-child {
+    color: cornflowerblue;
+  }
+  
+  /* accesses the second child of the class instead of giving another class name */
+  .singPostIcon:last-child {
+    color: red;
+  }
+  
+  /* single post info */
+  .singPostInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: "Glory", sans-serif;
+    color: rgb(175, 90, 20);
+  }
+  
+  /* styling for post desc */
+  .singPostDesc {
+      color:rgb(54, 50, 48);
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 18px;
+      line-height: 25px;
+  
+  }
+  
+  /* styling 1st letter */
+  .singPostDesc::first-letter {
+      margin-left: 20px;
+      font-size: 30px;
+      font-weight: 600;
+  }
